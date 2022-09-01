@@ -1,23 +1,28 @@
 
-const RockButton = document.getElementById('RockButton')
-const PaperButton = document.getElementById('PaperButton')
-const ScissorsButton = document.getElementById('ScissorsButton')
+const RockButton = document.getElementById('RockButton');
+const PaperButton = document.getElementById('PaperButton');
+const ScissorsButton = document.getElementById('ScissorsButton');
+const YourChoice = document.getElementById('your-choice-img');
+const ComputerChoice = document.getElementById('computer-choice-img');
 const Defeat = new Audio('sounds/Oof.mp3');
-const Victory = new Audio('sounds/Victory.mp3')
+const Victory = new Audio('sounds/Victory.mp3');
 
 
 RockButton.addEventListener('click', () => {
-  playRound('rock', getComputerChoice())
+  playRound('rock', getComputerChoice()),
+  YourChoice.setAttribute('src', 'images/rock.png');
 })
 
 PaperButton.addEventListener('click', () => {
-  playRound('paper', getComputerChoice())
+  playRound('paper', getComputerChoice()),
+  YourChoice.setAttribute('src', 'images/paper.png');
 })
 
 
 
 ScissorsButton.addEventListener('click', () => {
-  playRound('scissors', getComputerChoice())
+  playRound('scissors', getComputerChoice()),
+  YourChoice.setAttribute('src', 'images/scissors.png');
 })
 
 
@@ -55,6 +60,13 @@ function playRound(playerSelection, computerSelection) {
     document.getElementById("results").innerHTML = "Choose between Rock, Paper and Scissors!!";
   }
   document.getElementById('points').innerHTML = `${playerScore} at ${computerScore}`;
+  if (computerSelection === 'rock') {
+    ComputerChoice.setAttribute('src', 'images/rock.png')
+  } else if (computerSelection === 'paper') {
+    ComputerChoice.setAttribute('src', 'images/paper.png')
+  } else if (computerSelection === 'scissors') {
+    ComputerChoice.setAttribute('src', 'images/scissors.png')
+  }
   if (playerScore === 5) {
     document.getElementById("results").innerHTML = "You WON the Game!!!";
     Victory.play();

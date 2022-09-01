@@ -1,7 +1,7 @@
 
 html {
   background-image: url(images/lemongrab.png);
-  font-family: 'Fredoka One', cursive;
+  font-family: 'Fredoka One', cursive, sans-serif;
 }
 
 body {
@@ -51,4 +51,59 @@ img {
   object-fit: cover;
   max-height: 80%;
   max-width: 80%;
+}
+
+#Your-Choice {
+  padding: 10px;
+  margin: 0px;
+  width: 250px;
+  height: 250px;
+  background: linear-gradient(180deg, rgba(255,253,83,1) 0%, rgba(249,255,143,1) 100%);
+  border: 2px solid black;
+  margin-left: 50px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  box-shadow: 5px 10px black;
+}
+
+#Computer-Choice {
+  padding: 10px;
+  margin: 0px;
+  width: 250px;
+  height: 250px;
+  background: linear-gradient(180deg, rgba(255,253,83,1) 0%, rgba(249,255,143,1) 100%);
+  border: 2px solid black;
+  margin-right: 50px;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  flex-direction: column;
+  box-shadow: 5px 10px black;
+}
+
+#central {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+p {
+  margin: 0;
+  margin-bottom: 10px;
+  font-size: 25px;
+  text-align: center;
+}
+
+#your-choice-img {
+  max-height: 60%;
+  max-width: 60%;
+  margin: auto 0;
+}
+
+#computer-choice-img {
+  max-height: 60%;
+  max-width: 60%;
+  margin: auto 0;
 }
