@@ -1,11 +1,9 @@
 
-const RockButton = document.createElement('button')
-const PaperButton = document.createElement('button')
-const ScissorsButton = document.createElement('button')
-const Results = document.createElement('div')
-const Points = document.createElement('div')
-Results.setAttribute('id', 'results')
-Points.setAttribute('id', 'points')
+const RockButton = document.getElementById('RockButton')
+const PaperButton = document.getElementById('PaperButton')
+const ScissorsButton = document.getElementById('ScissorsButton')
+const Defeat = new Audio('sounds/Oof.mp3');
+const Victory = new Audio('sounds/Victory.mp3')
 
 
 RockButton.addEventListener('click', () => {
@@ -21,15 +19,6 @@ PaperButton.addEventListener('click', () => {
 ScissorsButton.addEventListener('click', () => {
   playRound('scissors', getComputerChoice())
 })
-
-
-
-document.body.appendChild(RockButton)
-document.body.appendChild(PaperButton)
-document.body.appendChild(ScissorsButton)
-document.body.appendChild(Results)
-document.body.appendChild(Points)
-
 
 
 
@@ -68,10 +57,12 @@ function playRound(playerSelection, computerSelection) {
   document.getElementById('points').innerHTML = `${playerScore} at ${computerScore}`;
   if (playerScore === 5) {
     document.getElementById("results").innerHTML = "You WON the Game!!!";
+    Victory.play();
     playerScore = 0;
     computerScore = 0;
   } else if (computerScore === 5) {
     document.getElementById("results").innerHTML = "You LOST the Game!!!";
+    Defeat.play();
     playerScore = 0;
     computerScore = 0;
   }

@@ -1,0 +1,54 @@
+
+html {
+  background-image: url(images/lemongrab.png);
+  font-family: 'Fredoka One', cursive;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin: 0;
+}
+
+#results, #points {
+  background: linear-gradient(180deg, rgba(255,253,83,1) 0%, rgba(249,255,143,1) 100%);
+  border: 2px solid black;
+  padding: 50px;
+  margin: 50px;
+  width: 300px;
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-size: 30px;
+  box-shadow: 5px 10px black;
+}
+
+#points {
+  font-size: 50px;
+}
+
+button {
+  background: linear-gradient(180deg, rgba(255,253,83,1) 0%, rgba(249,255,143,1) 100%);
+  width: 200px;
+  height: 100px;
+  justify-content: space-between;
+  margin: 0px 25px;
+  box-shadow: 5px 10px black;
+  cursor: pointer;
+}
+
+button:active {
+  scale: 1.1;
+  background: linear-gradient(180deg, rgba(141,255,83,1) 0%, rgba(249,255,143,1) 100%);
+}
+
+img {
+  object-fit: cover;
+  max-height: 80%;
+  max-width: 80%;
+}
